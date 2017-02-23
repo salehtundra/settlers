@@ -1,0 +1,25 @@
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%date - [%level] - from %logger in %thread
+        %n%message%n%xException%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <file>${application.home}/logs/application.log</file>
+    <encoder>
+      <pattern>%date - [%level] - from %logger in %thread
+        %n%message%n%xException%n</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="play" level="WARN" />
+  <logger name="application" level="WARN" />
+  <logger name="services" level="WARN" />
+
+  <root level="WARN">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="FILE" />
+  </root>
+</configuration>
