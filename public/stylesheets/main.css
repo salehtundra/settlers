@@ -1,0 +1,13 @@
+body {
+  padding-top:30px;
+}
+
+tr {
+  border: 3px solid #000;
+  text-align: center;
+}
+
+th {
+  border: 3px solid #000;
+  text-align: center;
+}
